@@ -1,7 +1,7 @@
 import express from 'express';
 
 const app = express();
-const port = process.env.PORT || 3000;
+
 
 // Middleware to parse JSON
 app.use(express.json());
@@ -27,6 +27,9 @@ app.post('/api/users', (req, res) => {
 });
 
 // Start server
-app.listen(3000, '0.0.0.0', () => {
-  console.log(`Server running on port ${port}`);
+
+const PORT = parseInt(process.env.PORT || '8080', 10);
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
