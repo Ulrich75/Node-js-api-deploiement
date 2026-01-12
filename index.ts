@@ -27,6 +27,6 @@ app.post('/api/users', (req, res) => {
 });
 
 // Start server
-app.listen(port, () => {
+app.listen(3000, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
